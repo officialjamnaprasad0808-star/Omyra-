@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Omyra Food</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
+text-align:center;
+}
+
+/* LOGO */
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#ff3d00;
+padding:20px;
+background:white;
+}
+
+/* NAVBAR */
+
+nav{
+background:#111;
+padding:12px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:16px;
+}
+
+nav a:hover{
+color:#ffcc00;
+}
+
+/* HERO */
+
+.hero{
+padding:40px;
+background:white;
+}
+
+.hero img{
+width:200px;
+}
+
+/* MENU GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+padding:20px;
+}
+
+/* FOOD CARD */
+
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+}
+
+.price{
+color:#ff3d00;
+font-weight:bold;
+}
+
+.order{
+background:#ff3d00;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* SPECIAL ITEM */
+
+.special{
+background:white;
+margin:30px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.special img{
+width:100%;
+max-width:400px;
+border-radius:10px;
+}
+
+.special h2{
+color:#ff3d00;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+padding:20px;
+margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- LOGO -->
+
+<div class="logo">🍔 Omyra Food</div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="Omyra.htnl">Home</a>
+<a href="menu.html">Menu</a>
+<a href="order.html">My Orders</a>
+<a href="helps us.html">Help</a>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Delicious Food Delivered Fast</h1>
+
+<p>Pizza, Burger, Samosa and Snacks Available</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
+
+</div>
+
+<!-- MENU -->
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+<h3>Pizza</h3>
+<p class="price">₹199</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<h3>Burger</h3>
+<p class="price">₹120</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+<h3>Samosa</h3>
+<p class="price">₹20</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585032226651-759b368d7246">
+<h3>Noodles</h3>
+<p class="price">₹90</p>
+<button class="order">Order</button>
+</div>
+
+</div>
+
+<!-- SPECIAL ITEM -->
+
+<div class="special">
+
+<h2>🔥 Special Dish – Cheese Burst Pizza</h2>
+
+<img src="https://images.unsplash.com/photo-1601924582975-7e1c5a3a0f91">
+
+<p>
+
+Our Special Cheese Burst Pizza is made with fresh dough, mozzarella cheese  
+and loaded toppings. Perfect for pizza lovers who want extra cheese and taste.
+
+</p>
+
+<p class="price">Special Price ₹249</p>
+
+<button class="order">Order Now</button>
+
+</div>
+
+<!-- MORE MENU -->
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908177522-429f3d9b2b53">
+<h3>Sandwich</h3>
+<p class="price">₹80</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
+<h3>French Fries</h3>
+<p class="price">₹70</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600628422019-6d88b38cdaaa">
+<h3>Momos</h3>
+<p class="price">₹60</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e">
+<h3>Chowmein</h3>
+<p class="price">₹90</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90">
+<h3>Jalebi</h3>
+<p class="price">₹40</p>
+<button class="order">Order</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589307004395-4c0e2d7d06c2">
+<h3>Dosa</h3>
+<p class="price">₹100</p>
+<button class="order">Order</button>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Omyra Food</p>
+
+</footer>
+
+</body>
+
+</html>

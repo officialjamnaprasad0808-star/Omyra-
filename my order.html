@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>My Orders</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+padding:20px;
+}
+
+h2{
+text-align:center;
+}
+
+.order{
+background:white;
+padding:15px;
+margin:10px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>My Orders</h2>
+
+<div id="orders"></div>
+
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyDTE0xbXt4YpmOzFn65tnnV0kZpYqAFScM",
+authDomain: "omyra-920d4.firebaseapp.com",
+databaseURL: "https://omyra-920d4-default-rtdb.asia-southeast1.firebasedatabase.app",
+projectId: "omyra-920d4",
+storageBucket: "omyra-920d4.firebasestorage.app",
+messagingSenderId: "487662181835",
+appId: "1:487662181835:web:f8e1f7e4eec60a6e6aaa4e"
+
+};
+
+const app=initializeApp(firebaseConfig)
+const db=getDatabase(app)
+
+const orderBox=document.getElementById("orders")
+
+onValue(ref(db,"orders"),(snapshot)=>{
+
+orderBox.innerHTML=""
+
+snapshot.forEach((child)=>{
+
+let data=child.val()
+
+orderBox.innerHTML+=`
+
+<div class="order">
+
+<h3>${data.food}</h3>
+
+<p>Name : ${data.name}</p>
+
+<p>Mobile : ${data.mobile}</p>
+
+<p>Address : ${data.address}</p>
+
+<p>Payment : ${data.payment}</p>
+
+<p>Status : ${data.status}</p>
+
+</div>
+
+`
+
+})
+
+})
+
+</script>
+
+</body>
+
+</html>"order-card">
+
+<h3>🍔 Samosa (2)</h3>
+
+<p>💰 Price: ₹40</p>
+
+<p>📍 Delivery Location: Gorakhpur</p>
+
+<p>Status: New</p>
+
+<button class="cancel" onclick="cancelOrder(this)">Cancel</button>
+
+</div>
+
+<!-- PENDING ORDERS -->
+
+<div class="section-title">⏳ Pending Orders</div>
+
+<div class="order-card">
+
+<h3>🍩 Jalebi (1)</h3>
+
+<p>💰 Price: ₹30</p>
+
+<p>📍 Delivery Location: Gorakhpur</p>
+
+<p>Status: Preparing</p>
+
+<button class="cancel" onclick="cancelOrder(this)">Cancel</button>
+
+</div>
+
+<!-- OLD ORDERS -->
+
+<div class="section-title">📦 Old Orders</div>
+
+<div class="order-card">
+
+<h3>🥟 Mogodi (3)</h3>
+
+<p>💰 Price: ₹75</p>
+
+<p>📍 Delivery Location: Gorakhpur</p>
+
+<p>Status: Delivered</p>
+
+</div>
+
+</div>
+
+<script>
+
+function cancelOrder(btn){
+
+let order = btn.parentElement;
+
+order.remove();
+
+alert("Order Cancelled");
+
+}
+
+</script>
+
+</body>
+
+</html>
